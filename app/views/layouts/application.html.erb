@@ -15,7 +15,7 @@
   </head>
   <body>
 
-    <%#= render 'shared/navbar' unless params[:controller] == "vins" && (params[:action] == "show" || params[:action] == "edit")%>
+    <%= render 'shared/navbar' unless params[:controller] == "vins" && (params[:action] == "show" || params[:action] == "edit")%>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
