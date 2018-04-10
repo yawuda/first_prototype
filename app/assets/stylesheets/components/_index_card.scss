@@ -1,0 +1,61 @@
+.container{
+
+}
+
+.block{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card{
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  background: white;
+  transition: all 0.3s ease;
+  // height: 193px;
+  // width: 348px;
+  font-size: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: left;
+  margin: 10px;
+}
+
+.card_image{
+  height: 193px;
+  width: 135px;
+}
+
+.card_ul{
+  list-style:none;
+  padding-left: 10px;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color: black;
+}
+.card_li_producteur{
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.card_li_annee{
+  font-size: 16px;
+}
+
+.card_li_notation{
+  font-size: 12px;
+  color: grey;
+}
+
+.card_li_price{
+  font-size: 30px;
+  color: grey;
+}
+
+.card_li_nb_btl_caisse{
+  font-size: 16px;
+  color: grey;
+}

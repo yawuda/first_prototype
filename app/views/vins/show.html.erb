@@ -1,0 +1,112 @@
+<div class="show_wrapper">
+
+  <div class="top-bar">
+    <div class="back_to_list">
+      <%= image_tag "icons/list.svg", width: 30%>
+      <%= link_to 'Back to list', vins_path %>
+    </div>
+
+    <div class="admin_buttons">
+      <div class="edit_button">
+        <%= link_to "Edit", edit_vin_path %>
+      </div>
+      <div class="edit_button">
+        <%= link_to "Delete", vin_path, method: :delete, data: { confirm: "Are you sure?" } %>
+      </div>
+
+    </div>
+
+    <div class="pay">
+
+      <%= link_to "Order and pay", cart_path %>
+      <%= image_tag "icons/cart-simple.svg", width: 30%>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="card-btl">
+      <%= cl_image_tag @vin.photo, width: 235, crop: :fill %>
+    </div>
+
+    <div class="card-descript">
+      <div class="first-descript">
+        <%= @vin.producteur %>
+        <%= @vin.annee %>
+      </div>
+
+      <div class="second-descript">
+        <%= @vin.region %>
+        <%= @vin.appelation %>
+        <%= @vin.vignoble %>
+      </div>
+
+
+      <div class="fourth-descript">
+        <%= @vin.description %>
+      </div>
+    </div>
+
+    <div class="">
+      <%= simple_form_for [@vin, @order_item] do |f| %>
+
+        <%= f.submit "add to cart", class: "btn btn-primary" %>
+      <% end %>
+      <!-- <button type="button" onclick="myFunction()">Add to cart</button> -->
+
+
+
+      <!-- <div id="add_to_cart_button">
+        Add to cart
+      </div> -->
+      <div class="price">
+        <div class="amount"><%= @vin.prix_btl %></div>
+        <div class="currency">Eur</div>
+        <div class="per_bottle">la bouteille</div>
+      </div>
+
+      <div class="details">
+
+        <div class="show_description_fields">
+          <ul style="list-style: none;">
+            <li>Region</li>
+            <li>Apellation</li>
+            <li>Vignoble</li>
+            <li>Alcool</li>
+            <li>Parker</li>
+            <li>J. Robinson</li>
+            <li>Année</li>
+            <li>Btl/caisses</li>
+          </ul>
+        </div>
+
+        <div class="show_description_values">
+          <ul style="list-style: none;">
+            <li><%= @vin.region %></li>
+            <li><%= @vin.appelation %></li>
+            <li><%= @vin.vignoble %></li>
+            <li><%= @vin.alcool %></li>
+            <li><%= @vin.parker %></li>
+            <li><%= @vin.jrobinson %></li>
+            <li><%= @vin.annee %></li>
+            <li><%= @vin.nb_btl_caisse %></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="review">
+    <div class="context">
+      <%= render 'reviews/form', vin: @vin, review: @new_review %>
+      <div id="existing">
+          <% @vin.reviews.each do |review| %>
+           <div class="existing">
+           <p> <%= review.content %> <%= link_to vin_review_path(@vin, review), method: :delete do %><i class="fa fa-trash" aria-hidden="true"></i></p>
+            <% end  %>
+           </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

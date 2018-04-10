@@ -1,0 +1,30 @@
+<div class="create-user">
+  <div class="login_card">
+    <div class="top-title">
+      <div class="welcome_text company_name">
+        AirbnWine
+      </div>
+
+      <div class="welcome_text strip_line">
+        Fine wine. Good price.
+      </div>
+    </div>
+    <div class="title">
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+    </div>
+
+    <div class="form">
+        <%= f.input :email, label: false, required: true, autofocus: true, placeholder: "email" %>
+        <%= f.input :password, label: false,required: true, placeholder: "type your password", hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+        <%= f.input :password_confirmation, label: false, required: true, placeholder: "confirm your password" %>
+    </div>
+
+    <div class="form-actions">
+        <%= f.button :submit, "Sign up", class: "btn btn-primary special  font-weight-light" %>
+    </div>
+    <% end %>
+
+      <%= render "devise/shared/links" %>
+  </div>
+</div>

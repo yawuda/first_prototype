@@ -1,0 +1,116 @@
+.index_header{
+  // width: 100%;
+  height: 840px;
+  // background-image: image-url('index_background.jpg');
+  // background-repeat: no-repeat;
+  //  background-size: cover;
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.info{
+  position: absolute;
+  top:100px;
+}
+.midle{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 800px;
+  height: 60px;
+  background-color: white;
+  border-radius: 4px;
+  color: gray;
+  font-size: 16px;
+  font-weight: 200;
+  opacity: 0.9;
+}
+.index_header_text{
+  color: white;
+  text-align: center;
+}
+
+#query {
+  width: 550px;
+  font-size: 20px;
+  font-weight: 200;
+  border: none;
+}
+.fa {
+  font-size: 2em;
+}
+.button {
+  width: 100px;
+  height: 40px;
+  background-color: #831F40;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* User Avatar */
+.avatar {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+.navbar-right {
+  position: absolute;
+  top: 30px;
+  right:30px;
+}
+.navbar-item {
+  cursor: pointer;
+  padding: 0 20px;
+}
+/* Navbar link */
+.navbar-link {
+  color: #616668;
+  font-size: 14px;
+}
+.navbar-link:hover {
+  color: #da552f;
+  text-decoration: none;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin-top: 15px;
+  box-shadow: 1px 1px 4px #E6E6E6;
+  border-color: #E6E6E6;
+}
+.navbar-dropdown-menu li > a {
+  transition: color 0.3s ease;
+  font-weight: lighter !important;
+  color: #999999 !important;
+  font-size: 15px !important;
+  line-height: 22px !important;
+  padding: 10px 20px;
+}
+.navbar-dropdown-menu li > a:hover {
+  background: transparent !important;
+  color: black !important;
+}
+.navbar-dropdown-menu:before {
+  content: ' ';
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  right: 10px;
+  top: -6px;
+  background-color: white;
+  transform: rotate(45deg);
+  border-left: 1px solid #E6E6E6;
+  border-top: 1px solid #E6E6E6;
+}

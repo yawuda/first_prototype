@@ -1,0 +1,18 @@
+  <%= simple_form_for @vin do |a| %>
+  <%= a.input :producteur %>
+  <%= a.input :region %>
+  <%= a.input :appelation %>
+  <%= a.input :vignoble %>
+  <%= a.input :alcool %>
+  <%= a.input :parker %>
+  <%= a.input :jrobinson %>
+  <%= a.input :prix_btl %>
+  <%= a.input :annee %>
+  <%= a.input :nb_btl_caisse %>
+  <%= a.input :description %>
+
+  <%= a.input :photo %>
+  <%= a.input :photo_cache, as: :hidden %>
+
+  <%= a.button :submit, class: 'btn btn-warning'%>
+  <% end %>
