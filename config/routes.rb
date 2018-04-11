@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   get 'carts/show'
 
   get 'orders/order'
-  
+
+    resource :menu, only: [:show]
     resource :cart, only: [:show]
-  
+
     resources :vins do
       resources :order_items, only: [:create, :update, :destroy]
       resources :reviews, only: [:create, :destroy]

@@ -1,0 +1,113 @@
+.container-menu h1{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 80px;
+  letter-spacing: 6px;
+}
+.container-menu h2{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+.wrap-menu{
+  background-color: green;
+  width: 100%;
+}
+.container-menu{
+  width:80%;
+  height:0 auto;
+  margin: 0 10% 0 10%;
+  background-color: white;
+}
+.title{
+  color: black;
+}
+.picture-card{
+  display:flex;
+  justify-content: space-around;
+}
+.body{
+  display:flex;
+}
+.navbar-wagon{
+  position: sticky !important;
+  top: 0;
+}
+
+// menu
+.product{
+  width:80%;
+  margin: 0 10% 0 10%;
+}
+.product h1{
+  display:flex;
+  text-align: center;
+}
+.box h1{
+  padding-top: 40px;
+  border-bottom: 1px solid green;
+}
+.detail{
+  display:flex;
+  text-align: center;
+}
+.detail p{
+  padding-top: 40px;
+}
+.menu-couple{
+  display:flex;
+  justify-content:space-around;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+.menu-alone{
+  display:flex;
+  justify-content: center;
+  text-align: center;
+  display: inline-block;
+  padding: 80px 30px 10px 10px;
+  width: 350px;
+}
+.name{
+  color:green;
+  padding-top:20px;
+}
+.ingredient{
+  padding-top:20px;
+}
+.price{
+  position:relative;
+  padding-top:20px;
+}
+.euro{
+  font-size: 18px;
+  position: absolute;
+  right: 10px;
+  padding-right: 30px;
+  color: green;
+}
+.type{
+  position: absolute;
+  left: 10px;
+  padding-left: 30px;
+}
+h3{
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+.extra{
+  display:flex;
+  justify-content: space-around;
+}
+.btn{
+  background-color:green;
+  color: white;
+  width: 200px;
+}
+.btn:hover{
+  background-color: #ECFAEF;
+  color:white;
+}
